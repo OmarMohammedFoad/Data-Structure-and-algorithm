@@ -60,7 +60,6 @@ void push (struct Student student){
 
 struct Student pop(){
     struct Student s;
-
     if(Hptr !=NULL){
     if(Hptr == Tptr) // there is one element in the stack
     {   
@@ -81,12 +80,19 @@ struct Student pop(){
         Tptr->next = NULL;
 
     }
-
-    return s;
+    }else{
+        strcpy(s.name,"");
+        s.id = -1;
+        for (int i = 0; i < 3; i++)
+        {
+            s.grades[i] = 0;
+        }
+        return s;
     }
 
 
 
+    return s;
 
 
 
@@ -98,11 +104,6 @@ struct Student pop(){
 void printAll()
 {
     struct Node *ptr = Hptr;
-    if (!ptr)
-    {
-        printf("The list is empty.\n");
-        return;
-    }
     printf("Student Details:\n");
     while (ptr)
     {
@@ -149,11 +150,11 @@ int main(){
             
           
             struct Student s = pop();
-            printf("%d",s.name);
-            printf("%s",s.name);
+            printf("%d\n",s.id);
+            printf("%s\n",s.name);
             for (int i = 0; i < 3; i++)
             {
-                printf("%d",s.grades[i]);
+                printf("%d\n",s.grades[i]);
             }
             
 
