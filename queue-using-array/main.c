@@ -73,7 +73,7 @@ struct Student dequeue()
 }
 
 int main (){
-   int choice;
+    int choice;
     struct Student s;
 
     while (1)
