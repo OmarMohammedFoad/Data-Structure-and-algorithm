@@ -142,6 +142,23 @@ void mergeSort(struct Student arr[],int Lb,int Ub)
 }
 
 
+bubbleSort(struct Student arr[],int n)
+{
+    int i,j;
+    struct Student temp;
+    for ( i = 0; i < n-1; i++)
+    {
+        for ( j = 0; j < n-i-1; j++)
+        {
+            if(arr[j].id > arr[j+1].id){
+                temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+        
+    }
+}
 
 
 
@@ -157,7 +174,8 @@ int choice;
         printf("2. Display Queue\n");
         printf("3. Sort \n");
         printf("4. search for one\n");
-        printf("5. Exit\n");
+        printf("5. bubble sort\n");
+        printf("6. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
         int num;
@@ -203,7 +221,14 @@ int choice;
             printAll(s);
              
             break;
+        
+
         case 5:
+            printf("\nBubble Sort\n");
+            bubbleSort(arr,num);
+            break;
+
+        case 6:
             printf("Exiting...\n");
             return 0;
 
