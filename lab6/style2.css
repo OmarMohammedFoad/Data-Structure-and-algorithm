@@ -1,0 +1,14 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+
+.marbela{
+    display: flex;
+}
+img{
+    height: 150px;
+    width: 150px;
+}
+
