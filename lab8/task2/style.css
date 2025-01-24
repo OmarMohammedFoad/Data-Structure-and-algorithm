@@ -1,0 +1,40 @@
+.outer-class{
+    /* background-color: aqua; */
+   
+    display: flex;
+    align-items: center;
+    border:3px solid black;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    position: relative;
+    
+}
+
+.outer-class .icon1{
+    position: absolute;
+}
+
+.outer-class .icon2{
+    position: absolute;
+    left: 450px;
+}
+
+.Top{
+    position: relative;
+    top: 230px;
+    left: 240px;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 230px;
+    
+}
+
+.buttons button{
+    margin: 20px;
+
+}

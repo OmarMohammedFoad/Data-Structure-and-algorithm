@@ -1,0 +1,28 @@
+.menu table {
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+.menu th, .menu td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    
+}
+tbody tr td{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    background-color: aqua;
+}
+
+.menu button {
+    padding: 5px 10px;
+    margin: 2px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+.menu button:hover {
+    background-color: #ddd;
+}

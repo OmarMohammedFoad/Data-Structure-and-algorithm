@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+</head>
+<style>
+
+
+  
+.outer-class{
+    /* background-color: aqua; */
+   
+    display: flex;
+    align-items: center;
+    background-color: aliceblue;
+    border:3px solid black;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    position: relative;
+    
+}
+
+.outer-class .icon1{
+    position: absolute;
+}
+
+.outer-class .icon2{
+    position: absolute;
+    left: 450px;
+}
+
+.Top{
+    position: relative;
+    top: 230px;
+    left: 240px;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 230px;
+    
+}
+
+.buttons button{
+    margin: 20px;
+
+}
+img{
+    width: 55px;
+    height: 55px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+</style>
+<body>
+
+    <div id="outer-class" class="outer-class">
+
+        <img src="./imgs/icon1.gif" id="class1" class="icon1" alt=""> 
+        <img src="./imgs/icon2.gif" id="class2" class="icon2" alt="">
+        
+        <img src="./imgs/TOP.JPG" id="class3" class="Top" alt=""> 
+
+    </div>
+
+    <div class="buttons">
+        <button id="button1">Move</button>
+        <button id="button2">stop</button>
+    </div>
+</body>
+    <script src="./script.js"></script>
+</html>
