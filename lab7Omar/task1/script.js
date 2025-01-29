@@ -4,8 +4,8 @@ window.onload = function () {
     var formArr = [];
     var count = 0;
     var fname = document.getElementById("fname");
-var lname = document.getElementById("lname");
-var email = document.getElementById("email")
+    var lname = document.getElementById("lname");
+    var email = document.getElementById("email")
 
    form.onsubmit = function(e){
     e.preventDefault();
@@ -60,12 +60,13 @@ var email = document.getElementById("email")
             formArr[parts[0].trim()] = parts[1];
         }
 
+        console.log(formArr);
         
         return formArr
     }
 
 
-    function addVisits() {
+    function    () {
         var visitor = displayCookies();
         var visitCount = parseInt(visitor['visits']);
 
@@ -94,14 +95,15 @@ var email = document.getElementById("email")
 
         for (var i = 0; i < cookieArray.length; i++) {
             var parts = cookieArray[i].split("=");
-
+            console.log(parts[0].trim()+"=;"+"expires="+date.toUTCString());
 
             document.cookie = parts[0].trim()+"=;"+"expires="+date.toUTCString();
             
         }
         
     }
-
-    addVisits()
+    // console.log(document.cookie);
+    displayCookies();
+    // clearCookies();
     
 }

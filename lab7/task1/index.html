@@ -1,40 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+        *{
+            margin: 0;
+            font-family: poppins;
+            color: #2b2b2b;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            height: calc(100vh - 2rem);
+        }
+        main{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: calc(100vh - 6rem);
+            padding: 2em;
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+            box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+            border-radius: 0.5em;
+        }
+        main .welcome{
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+        }
+        main .welcome figure{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 4em;
+            height: 4em;
+            border-radius: 100%;
+            background-color: #ffffff;
+        }
+        main .welcome figure img{
+            width: 2em;
+        }
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-</head>
+        main .info{
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+        }
 
-<body>
+        main .info ul{
+            padding: 0;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+        }
 
-    <form action="./showData.html" id="formData" >
-        <div class="form-container">
-            <label for="name">Your name</label>
-            <input type="text" id="name" placeholder="enter your name please">
-    
-            <label for="age">Your Age</label>
-            <input type="text" id="age" placeholder="enter your age please">
-    
-            <label for="selectGender">Select Gender</label>
-            <div class="slecGender" id="gender" >
-                <img src="imgs/1.jpg" alt="male">
-                <img src="imgs/2.jpg" alt="female">
+    </style>
+    </head>
+    <body>
+        <main>
+            <div class="welcome">
+                <figure>
+                    <img src="" alt="user icon" id="gender-img"/>
+                </figure>
+                <div>
+                    <h1>Welcome,</h1>
+                    <p class="name" id="name"></p>
+                </div>
             </div>
-    
-            <label for="colors">Select your favourite color</label>
-            <select name="colors" id="colors">
-                <option value="red">red</option>
-                <option value="yellow">yellow</option>
-                <option value="green">green</option>
-                <option value="blue">blue</option>
-            </select>
-            <button type="submit" id="sumbitButton">Submit</button>
-        </div>
-    </form>
-</body>
-
+            <div class="info">
+                <h2 id="message"></h2>
+            </div>
+        </main>
+        <script type="module" src="JScookie.js"></script>
+        <script type="module" src="index.js"></script>
+    </body>
 </html>
