@@ -9,7 +9,7 @@ onload = function () {
   selectedBand.addEventListener("click", function () {
     // console.log(selectedBand.options[selectedBand.options.selectedIndex]);
 
-    var value = selectedBand.options[selectedBand.options.selectedIndex].value;
+    var value = selectedBand  .value;
 
     // console.log(value);
 

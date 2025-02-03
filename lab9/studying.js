@@ -176,3 +176,139 @@ This means that the rules of scope are determined before the code runs, and they
  */
 
 
+
+
+/****
+ * 
+ *  we have to scope 
+ * {
+ *  global scope and function global
+ * 
+ *  we have block scope 
+ * {
+ * 
+ * 
+ * 
+ *      var and let hoisted in brower 
+ *  var hoisted and its value is undefined 
+ *  var is in the gloabal scope  
+ *  i can redeclare the var 
+
+
+* and
+ *  let hoisted and its value is not intialized 
+ *  but let is in the Temp dead area and its not in the global window
+ *  i can not re declarate to let 
+ *  the let is blocked scope 
+ *  
+ * 
+ *  and 
+ * 
+ * 
+ * 
+ * const 
+ * 
+ * 
+ * 
+ * {
+ *  var w = "asd"
+ *  let x = "" 
+ * }
+ * 
+ * log(w) => w
+ * log(x) => Error undefined 
+ * 
+ * 
+ * console.log(index) // undefined 
+ * for (let index = 0; index < array.length; index++) {
+ * 
+ * 
+ *   const element = array[index];
+    
+ *   } 
+
+
+    let creates block scope 
+    and each iteration is blocked scope 
+
+
+    // function outer(){
+//    
+//     function inner(){
+//     for (let i = 0; i < array.length; i++) {
+ * 
+ *          arr.push((function))            
+ *   
+    
+ *   } 
+    
+//     }
+//  return inner
+// }
+
+
+ *   console.log(index) // undefined 
+ * 
+ *  let and const 
+ * 
+ * 
+ * }
+ * 
+ * 
+ * }
+ * 
+ * 
+ * 
+ * 
+ * 
+ * arguments in functions 
+ * 
+ * da esmo spread argument
+ * function(x,y,...z)
+ * 
+ *  console.log(arguments) => inherits from objects 
+ * }
+ * 
+ * 
+ * 
+ * spread operator bet3ml shallow copy
+ * shallow copy => b3ml copy leawel level bs  
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * search about the by value and by reference in object
+ * 
+ * 
+ * var obj = {
+ * 
+ *  propName:"xyz",
+ *  test:function(){
+ *  log("asdsa");
+ * }
+ * 
+ *  callByRef:{
+ *  x:sadsa
+ * }
+ * }
+ * 
+ * var obj2 = {...obj}
+ * 
+ * obj2.callByRef.x = "asdsa"
+ * haysma3 fe obj because its call by reference
+ * bs lama 
+ * 
+ * 
+ * 
+ */
+
+
+const {x,...y} = {name:"omar",age:"asdsa"};
+
+console.log(x);
