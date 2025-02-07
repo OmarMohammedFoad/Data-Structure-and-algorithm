@@ -20,9 +20,9 @@
 //   this.address = address;
 //   this.greet2 = function () {
 // 	console.log(this);
-	
+
 //     console.log("Hello, my name is " + this.name);
-		
+
 // 	return "this is object";
 //   };
 // }
@@ -57,14 +57,11 @@
 // // var brand = "asdas"
 // // car.startEngine.call(this); // Output: Starting the Harley Davidson engine...
 
-
-
-
 // function Employee(name,age,dept,salary) {
 // 	this.Edept = dept;
 // 	this.Esalary = salary;
 // 	Person.apply(this,[name,age]);
-	
+
 // }
 
 // Employee.prototype = Object.create(Person.prototype);
@@ -78,13 +75,11 @@
 // const emp = new Employee("omar",12,"dept1",3000);
 // // Employee.prototype.display = function () {
 // // 	console.log("Hello from constructor Employee");
-	
+
 // // }
 // // console.log(emp.display());
 
 // console.log(emp.greet2());
-
-
 
 // {
 //   let x =0;
@@ -95,54 +90,83 @@
 //   console.log(x);
 //   {
 //     let x = 10;
-    
+
 //   }
 // }
 
 // fun();
 
+// const user = {
+//   name :"omar",
+//   age:25,
+//   size:{
+//     height:30,
+//     width:50
+//   },
 
+//   sayHI : function sayHi(){
+//     console.log(this.name);
 
-const user = {
-  name :"omar",
-  age:25,
-  size:{
-    height:30,
-    width:50
-  },
-  
-  sayHI : function sayHi(){
-    console.log(this.name);
-    
-  }
-}
-const newUser = {
-...user
-};
-//  Object.assign(newUser,user)
-// user.size.height = 300
-// console.log(newUser);
-// console.log(user);
-
-
-
-// newUser.sayHI = function (params) {
-//   console.log("goodBye");
-  
+//   }
 // }
-newUser.name = "Ali"
-newUser.sayHI()
-// user.sayHI()
+// const newUser = {
+// ...user
+// };
+// //  Object.assign(newUser,user)
+// // user.size.height = 300
+// // console.log(newUser);
+// // console.log(user);
+
+// // newUser.sayHI = function (params) {
+// //   console.log("goodBye");
+
+// // }
+// newUser.name = "Ali"
+// newUser.sayHI()
+// // user.sayHI()
+
+// function makeUser() {
+//   return {
+//     name: "John",
+//     ref: this
+//   };
+// }
+
+// let user2 = makeUser();
+
+// console.log(user2.ref);
+
+// let id = Symbol.for("foo");
+// let id2 = Symbol.for("foo");
+// console.log(Symbol.keyFor(id));
+// console.log(id2);
+
+// JSON.stringify()
+
+// console.log(id===id2);
 
 
 
-function makeUser() {
-  return {
-    name: "John",
-    ref: this
-  };
+function fun(x=3,y=5,obj={}){/**issue with null & undfined */    
+    var defaultObj = {
+        nm:"ali",
+        age:20,
+        ...obj
+    }
+    var myObj={nm:obj.nm,age:obj.age}
+    // console.log(obj.nm);
+    
+
+    var sum = x+y
+    return `${sum} + ${myObj.nm} and ${myObj.age}`
 }
 
-let user2 = makeUser();
+// console.log(fun(1,2,{}))//3
+console.log(fun(1,null,{nm:"ahmed",age:20}))//NaN//6
+// console.log(fun("aa","x",undefined))//
+// console.log(fun(1,2,{nm:'mona'}))//8
+// console.log(fun(1,2,{age:25}))//8
+// console.log(fun(1,2,{age:25,nm:'fady'}))//8
 
-console.log(user2.ref);
+
+
