@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="video" >
+        <video   src="https://cdn.xgqfrms.xyz/HTML5/video/controlslist.mp4">
+        </video>
+
+
+
+
+        <div class="time-duration" style="display: flex; gap: 10px;">
+        <input type="range" id="videoSlider" min="0" max="100" value="0">
+        <span id="time_duration">Duration / 00/00</span>
+       </div>
+
+        <div class="speed-control">
+            <label for="speed" class="speed-label">Speed</label>
+            <input type="range" id="speed" name="volume" step="0.5" min="0.5" max="11" class="speed-slider" />
+            <span id="speedValue" class="speed-value">1x</span>
+        </div>
+
+        <div class="volume-control">
+            <label for="volume" class="volume">volume</label>
+            <input type="range" id="volume" name="volume" step="0.25" min="0" max="1" class="speed-slider" />
+            <span id="volumeValue" class="volume">1x</span>
+        </div>
+
+
+
+        <div class="buttons">
+            <button onclick="play()">Play</button>
+            <button onclick="stop()">Stop</button>
+            <button onclick="speedBackward()"><<</button>
+            <button onclick="prev()"><</button>
+            <button onclick="next()">  > </button>
+            <button onclick="speedForward()">>></button>
+            <button onclick="normal()">Normal</button>
+
+            
+            <button onclick="mute()">Mute</button>
+        </div>
+    
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
