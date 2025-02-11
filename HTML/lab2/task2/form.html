@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <form id="form" action="./showData.html">
+        <div class="form-container">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" placeholder="enter your name please">
+
+            <label for="age">Your Age</label>
+            <input type="text" id="age" name="age" placeholder="enter your age please">
+
+            <label for="selectGender">Select Gender</label>
+            <div class="selectGender" id="gender">
+                <img src="imgs/1.jpg" alt="male" data-value="male">
+                <img src="imgs/2.jpg" alt="female" data-value="female">
+            </div>
+
+            <label for="colors">Select your favourite color</label>
+            <select name="colors" id="colors">
+                <option value="red">red</option>
+                <option value="yellow">yellow</option>
+                <option value="green">green</option>
+                <option value="blue">blue</option>
+            </select>
+            <button type="submit" id="submitButton">Submit</button>
+        </div>
+    </form>
+</body>
+<script src="form.js"></script>
+
+
+</html>
