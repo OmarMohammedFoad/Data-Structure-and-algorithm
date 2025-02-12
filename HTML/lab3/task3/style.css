@@ -1,0 +1,83 @@
+#heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+}
+  #heart:before,
+  #heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: red;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+  }
+  #heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+  }
+
+  #heart{
+    transform: rotate(-180deg);
+  }
+
+
+
+  .teal{
+    position: relative;
+  }
+
+
+
+  .teal:before,
+  .teal:after {
+    position: absolute;
+    content: "";
+    left: 45px;
+    top:0.5px;
+    width: 10px;
+    height: 20px;
+    background: red;
+    border-radius: 50px 50px 0 0;
+    transform-origin: 0 100%;
+  }
+
+
+
+  .card{
+    border:3px solid red;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+  }
+
+
+  .my-heart{
+    position: relative;
+  }
+
+
+  .A-first{
+    position:absolute;
+    bottom:420px;
+    left: 450px;
+  }
+
+
+
+  .A-second{
+    position: absolute;
+    left: 30px;
+    top: 21px;
+  }
+
+

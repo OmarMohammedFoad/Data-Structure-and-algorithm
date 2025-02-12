@@ -1,0 +1,46 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  width: 40%;
+  height: 100%;
+  padding: 20px;
+  margin: 20px;
+  gap: 20px;
+}
+
+input:invalid {
+  border:3px solid #ee3131;
+}
+
+
+
+input:valid {
+  border:3px solid rgb(24, 124, 131);
+}
+
+
+label {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+label input {
+  margin: 20px 0;
+}
+
+button {
+  width: 20%;
+  padding: 5px;
+}
+
+
+.active {
+  color: red;
+  font-size: 14px;
+  display: none;}
+
+  input:invalid + .active {
+    display: block;
+  }
