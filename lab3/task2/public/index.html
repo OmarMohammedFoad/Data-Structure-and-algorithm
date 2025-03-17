@@ -1,0 +1,48 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div id="users"></div>
+
+</body>
+
+<script>
+    const users = document.getElementById('users');
+    async function getUsers() {
+
+        let response = await fetch("/users");
+
+        if (!response.ok) {
+            throw new Error("Failed to fetch users");
+        }
+
+        let data = await response.json();
+        
+        const container = document.createElement('div');
+        
+        data.map(element => {
+            console.log(element);
+            
+            container.innerHTML += `<h1>${element.name}</h1> <p>${element.age}</p>`;
+        });
+        
+         
+            users.append(container)
+            
+
+    }
+
+
+
+
+    getUsers();
+</script>
+
+</html>
