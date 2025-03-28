@@ -1,0 +1,66 @@
+<head>
+  <%- include('../partial/head'); %>
+</head>
+
+<header>
+  <%- include('../partial/header'); %>
+</header>
+
+<body>
+  <!-- Header -->
+  <div class=" text-center lg:mb-10 mb-6">
+    <h2 class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+      Chat Room
+    </h2>
+  </div>
+
+  <div class="flex flex-col  justify-end items-center  w-full">
+    <div class=" bg-blue-500 p-4  text-white text-lg w-full text-center  font-bold">Chat</div>
+
+    <div id="messages" class="flex-1 p-4  overflow-y-auto">
+      <div class="flex ">
+        <p>
+          <%=user.userName%>
+        </p>
+      </div>
+    </div>
+
+    <form id="form" class="p-2  bg-gray-200 flex">
+      <input id="input" class="flex-1 p-2 rounded-lg border" placeholder="Type a message...">
+      <button class="bg-blue-500 text-white px-4 py-2 rounded-lg ml-2">Send</button>
+    </form>
+  </div>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+
+  <script>
+    const socket = io();
+    const form = document.getElementById("form");
+    const input = document.getElementById("input");
+    const messages = document.getElementById("messages");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (input.value) {
+        const msg = { text: input.value, sender: "You" };
+        socket.emit("chat message", msg);
+        addMessage(msg, true);
+        input.value = "";
+      }
+    });
+
+    socket.on("chat message", (msg) => {
+      addMessage(msg, false);
+    });
+
+    function addMessage(msg, isMine) {
+      const div = document.createElement("div");
+      div.className = `p-2 rounded-lg w-fit max-w-xs ${isMine ? "bg-green-500 text-white self-end" : "bg-gray-300 text-black"}`;
+      div.innerText = msg.text;
+      messages.appendChild(div);
+      messages.scrollTop = messages.scrollHeight;
+    }
+  </script>
+</body>
+
+</html>
