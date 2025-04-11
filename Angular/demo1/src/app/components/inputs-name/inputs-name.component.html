@@ -1,0 +1,13 @@
+<!-- <h1>inputs-name works!</h1> -->
+
+<label [for]="'name'">name</label>
+
+<input
+  type="text"
+  [id]="'name'"
+  [(ngModel)]="name"
+  />
+
+<p>name: {{ name }}</p>
+
+<button (click)="reset()">Reset</button>

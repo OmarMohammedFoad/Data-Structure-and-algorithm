@@ -1,0 +1,16 @@
+<p>view-images works!</p>
+
+<div class="container">
+    <div class="image-container">
+        <img
+            [src]="imgSrc"
+            [alt]="'Image ' + (count + 1)"
+            class="image"
+        />    
+    <div class="controller">
+        <button (click)="prev()">Prev</button>
+        <button (click)="next()">Next</button>
+        <button (click)="play()">play</button>
+        <button (click)="stop()">Stop</button>
+    </div>
+</div>
