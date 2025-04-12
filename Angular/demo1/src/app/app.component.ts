@@ -11,8 +11,9 @@ import { StudentsComponent } from './components/students/students.component';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  students: { name: ''; age: 0 }[] = [];
-  GetData(data: any) {
-    this.students.push(data);
+  student: { name: string; age: number } | undefined;
+
+  handleNewStudent(student: { name: string; age: number }) {
+    this.student = { ...student }; 
   }
 }

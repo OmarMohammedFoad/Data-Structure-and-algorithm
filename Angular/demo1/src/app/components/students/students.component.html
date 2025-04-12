@@ -12,8 +12,8 @@
 
                 @for (student of students; track $index) {
                 <tr>
-                    <td class="border px-4 py-2">{{ student.name }}</td>
-                    <td class="border px-4 py-2">{{ student.age }}</td>
+                    <td class="border px-4 py-2">{{ student?.name }}</td>
+                    <td class="border px-4 py-2">{{ student?.age }}</td>
                 </tr>
                 }
 
