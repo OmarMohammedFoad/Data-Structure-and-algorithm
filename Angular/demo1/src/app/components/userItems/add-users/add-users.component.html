@@ -1,0 +1,11 @@
+<div class="max-w-md mx-auto bg-white p-6 shadow-md rounded">
+    <h2 class="text-2xl mb-4">Add New User</h2>
+
+    <form (ngSubmit)="addUser()">
+        <input class="input" [(ngModel)]="user.firstName" name="name" placeholder="Name" required />
+        <input class="input mt-2" [(ngModel)]="user.email" name="email" placeholder="Email" required />
+        <input class="input mt-2" [(ngModel)]="user.phone" name="phone" placeholder="Phone" required />
+        <!-- <input class="input mt-2" [(ngModel)]="user.address" name="address" placeholder="Address" required /> -->
+        <button class="btn mt-4" type="submit" >Add User</button>
+    </form>
+</div>

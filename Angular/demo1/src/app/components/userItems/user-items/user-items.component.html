@@ -1,0 +1,16 @@
+@if (user) {
+  <div class="p-3 m-3 flex flex-row flex-wrap items-center justify-center">
+    <div class="card w-96  bg-gray-100 card-xl shadow-sm ">
+      <img src={{user.image}} alt="">  
+      <div class="card-body">
+          <h2 class="card-title">{{user.firstName}}</h2>
+          <p>Email:{{user.email}}</p>
+         <p>phone : {{user.phone}}</p>
+        </div>
+      </div>
+ </div>
+  }
+  @else {
+    <h1 class="alert alert-danger">Loading....</h1>
+  }
+  

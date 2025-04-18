@@ -1,0 +1,20 @@
+
+<div class="flex flex-row flex-wrap items-center justify-center">
+  @for ( user of UserItem; track $index) {
+      <div class="p-3 m-3">
+        <div class="card w-96  bg-gray-100 card-xl shadow-sm ">
+          <img src={{user.image}} alt="">  
+          <div class="card-body">
+              <h2 class="card-title">{{user.firstName}}</h2>
+              <p>Email: <a routerLink="/users/{{user.id}}">{{user.email}}</a></p>
+             <p>Phone:{{user.phone}}</p>
+            </div>
+          <div class="card-actions justify-end p-3">
+            <button class="btn btn-primary" (click)="deleteUser(user.id)">Delete</button>
+            <button class="btn btn-secondary" [routerLink]="['/users/edit', user.id]">Edit</button>
+           
+          </div>
+          </div>
+     </div>
+    }
+  </div>
