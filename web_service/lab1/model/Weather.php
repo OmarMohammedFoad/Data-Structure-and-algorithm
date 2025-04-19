@@ -2,7 +2,6 @@
 require 'vendor/autoload.php';
 use GuzzleHttp\Client;
 
-// Weather class
 class Weather
 {
     private $apiKey = "";
