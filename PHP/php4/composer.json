@@ -1,0 +1,21 @@
+{
+  "name": "omarfouad/php4",
+  "require": {
+    "illuminate/database": "^9.52"
+  },
+  "autoload": {
+    "classmap": [
+      "Model/",
+      "Controllers/"
+    ]
+  },
+  "files": [
+    "config.php"
+  ],
+  "authors": [
+    {
+      "name": "Omar Muhammad",
+      "email": "cds.omarmuhammad92694@alexu.edu.eg"
+    }
+  ]
+}
