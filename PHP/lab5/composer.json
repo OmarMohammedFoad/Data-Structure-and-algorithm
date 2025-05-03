@@ -1,0 +1,22 @@
+{
+  "name": "omarfouad/php4",
+  "require": {
+    "illuminate/database": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\":[
+      "src"
+      ]
+    }
+  },
+  "files": [
+    "config.php"
+  ],
+  "authors": [
+    {
+      "name": "Omar Muhammad",
+      "email": "cds.omarmuhammad92694@alexu.edu.eg"
+    }
+  ]
+}
